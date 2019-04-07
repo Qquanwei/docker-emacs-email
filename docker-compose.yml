@@ -1,0 +1,21 @@
+version: "3"
+services:
+  emacs:
+    build:
+      context: ./
+      dockerfile: emacs.dockerfile
+    volumes:
+      - mail:/root/Maildir
+      - muindex:/root/.mu
+  offlineimap:
+    build:
+      context: ./
+      dockerfile: offlineimap.dockerfile
+    volumes:
+      - mail:/Maildir
+      - muindex:/root/.mu
+
+volumes:
+  mail:
+  muindex:
+  mailsecrets:
