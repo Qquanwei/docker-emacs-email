@@ -1,13 +1,12 @@
 [general]
 accounts= 126
-maxsynccounts = 2
+maxsyncaccounts = 2
 
 [Account 126]
 localrepository = Local126
 remoterepository = Repository126
 autorefresh = 5
 quick = 10
-postsynchook = mu index --maildir /Maildir
 
 [Repository Local126]
 type = Maildir
